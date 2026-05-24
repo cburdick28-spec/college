@@ -16,6 +16,12 @@ export const athleteProfile = {
   instagramUrl: "https://instagram.com/",
 };
 
+export const contactInfo = {
+  email: "connorburdick@gmail.com",
+  instagram: "@burdickconnor",
+  location: "Madrid, Spain",
+};
+
 export const projects = [
   {
     name: "BrewsterApp",
