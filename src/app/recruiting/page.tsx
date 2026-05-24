@@ -1,8 +1,5 @@
-import Link from "next/link";
-
 import { ContactForm } from "@/components/ContactForm";
-import { Button } from "@/components/ui/button";
-import { athleteProfile } from "@/lib/site-data";
+import { athleteProfile, contactInfo } from "@/lib/site-data";
 
 const summaryStats = [
   ["Name", athleteProfile.name],
@@ -40,14 +37,16 @@ export default function RecruitingPage() {
         </p>
       </article>
 
-      <div className="flex flex-wrap gap-3">
-        <Link href="#" aria-disabled>
-          <Button>Download Resume (PDF)</Button>
-        </Link>
-        <Link href="/contact">
-          <Button variant="outline">Connect with Coaching Staff</Button>
-        </Link>
-      </div>
+      <article className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 text-sm text-zinc-300">
+        <h2 className="text-xl font-semibold text-white">Interested in recruiting Connor Burdick?</h2>
+        <p className="mt-3">
+          Email: <span className="text-zinc-100">{contactInfo.email}</span>
+        </p>
+        <p>
+          Instagram: <span className="text-zinc-100">{contactInfo.instagram}</span>
+        </p>
+        <p className="mt-3">Response time: typically within 24–48 hours</p>
+      </article>
 
       <ContactForm cta="Send to Recruiting Inbox" />
     </section>
