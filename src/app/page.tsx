@@ -255,7 +255,8 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.4em] text-blue-200">Open to Recruiting Opportunities</p>
               <h2 className="text-3xl font-semibold text-white">Recruiting contact</h2>
               <p className="text-sm text-zinc-300">
-                GK | Class of 2028 | 6&apos;2&quot; | 165 lbs | Madrid, Spain | GPA {athleteProfile.gpa}
+                GK | Class of 2028 | {athleteProfile.height} | {athleteProfile.weight} | Madrid, Spain | GPA{" "}
+                {athleteProfile.gpa}
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
