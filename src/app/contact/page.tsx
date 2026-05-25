@@ -33,13 +33,22 @@ export default function ContactPage() {
         <h2 className="text-lg font-semibold text-white">Links</h2>
         <ul className="mt-3 space-y-2">
           <li>
-            YouTube Highlights: <Link className="text-blue-300" href={athleteProfile.highlightsUrl}>{athleteProfile.highlightsUrl}</Link>
+            Showcase Evaluation Footage:{" "}
+            <Link className="text-blue-300" href={athleteProfile.showcaseUrl}>
+              {athleteProfile.showcaseUrl}
+            </Link>
           </li>
           <li>
-            GitHub: <Link className="text-blue-300" href={athleteProfile.githubUrl}>{athleteProfile.githubUrl}</Link>
+            GitHub:{" "}
+            <Link className="text-blue-300" href={athleteProfile.githubUrl}>
+              {athleteProfile.githubUrl}
+            </Link>
           </li>
           <li>
-            Instagram (optional): <Link className="text-blue-300" href={athleteProfile.instagramUrl}>{athleteProfile.instagramUrl}</Link>
+            Instagram:{" "}
+            <Link className="text-blue-300" href={athleteProfile.instagramUrl}>
+              {athleteProfile.instagramUrl}
+            </Link>
           </li>
         </ul>
       </article>

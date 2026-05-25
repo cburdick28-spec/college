@@ -1,24 +1,29 @@
 export const athleteProfile = {
   name: "Connor Burdick",
-  role: "Student-Athlete + Developer",
+  role: "Goalkeeper Recruit",
   primaryPosition: "Goalkeeper",
   secondaryPosition: "Forward / Striker experience",
   classYear: "2028",
   location: "Madrid, Spain",
-  school: "Brewster Madrid American School",
+  school: "Brewster Madrid (American School)",
   nationality: "American",
   height: "6'2\"",
   weight: "165 lbs",
   foot: "Right",
   gpa: "3.6",
-  highlightsUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  gpaTrend: "2.6 → 3.6",
+  showcaseUrl: "https://www.youtube.com/watch?v=N_aLIddx_Cs",
+  showcaseEmbedUrl: "https://www.youtube.com/embed/N_aLIddx_Cs",
+  filmLibraryUrl:
+    "https://drive.google.com/drive/folders/1US8sQDyp60TCfVF0GXDffc9hryI3uLw6?usp=drive_link",
   githubUrl: "https://github.com/cburdick28-spec",
-  instagramUrl: "https://instagram.com/",
+  instagramUrl: "https://www.instagram.com/burdickconnor/",
 };
 
 export const contactInfo = {
   email: "connorburdick@gmail.com",
   instagram: "@burdickconnor",
+  instagramUrl: "https://www.instagram.com/burdickconnor/",
   location: "Madrid, Spain",
 };
 

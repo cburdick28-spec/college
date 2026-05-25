@@ -8,11 +8,15 @@ export default function SoccerPage() {
   return (
     <section className="space-y-6">
       <h1 className="text-3xl font-bold text-white">Soccer Recruiting Profile</h1>
+      <p className="text-sm text-zinc-300">
+        Showcase Evaluation Footage highlighting goalkeeper decision-making, positioning, and distribution under
+        pressure.
+      </p>
       <div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60">
         <iframe
           className="aspect-video w-full"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="Connor Burdick highlight reel"
+          src={athleteProfile.showcaseEmbedUrl}
+          title="Showcase Evaluation Footage"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
@@ -53,7 +57,9 @@ export default function SoccerPage() {
           <Button>Contact for Recruiting Opportunities</Button>
         </Link>
       </article>
-      <p className="text-xs text-zinc-400">Highlights link: {athleteProfile.highlightsUrl}</p>
+      <p className="text-xs text-zinc-400">
+        Showcase Evaluation Footage: {athleteProfile.showcaseUrl}
+      </p>
     </section>
   );
 }
