@@ -18,7 +18,13 @@ const snapshotItems = [
   },
   {
     title: "Academics",
-    copy: `GPA trend ${athleteProfile.gpaTrend} with strong STEM and business performance.`,
+    copy: (
+      <>
+        GPA trend{" "}
+        <span aria-label={athleteProfile.gpaTrendLabel}>{athleteProfile.gpaTrend}</span> with strong STEM and
+        business performance.
+      </>
+    ),
   },
   {
     title: "Builder Profile",
@@ -67,9 +73,7 @@ const filmLibraryItems = [
   "Training clips",
 ];
 
-const builderProjects = projects.filter((project) =>
-  ["BrewsterApp", "BrewsterAI", "Soccersim", "futtysim"].includes(project.name)
-);
+const builderProjects = projects.filter((project) => project.recruitingFeatured);
 
 export default function Home() {
   return (
@@ -222,8 +226,11 @@ export default function Home() {
           <article className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg backdrop-blur">
             <h3 className="text-xl font-semibold text-white">Academic trajectory</h3>
             <p className="text-sm text-zinc-300">
-              GPA progression <span className="font-semibold text-white">{athleteProfile.gpaTrend}</span> with
-              strong STEM performance and business + computer science strengths.
+              GPA progression{" "}
+              <span className="font-semibold text-white" aria-label={athleteProfile.gpaTrendLabel}>
+                {athleteProfile.gpaTrend}
+              </span>{" "}
+              with strong STEM performance and business + computer science strengths.
             </p>
             <AcademicsChartSection />
             <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">

@@ -12,6 +12,7 @@ export const athleteProfile = {
   foot: "Right",
   gpa: "3.6",
   gpaTrend: "2.6 → 3.6",
+  gpaTrendLabel: "2.6 to 3.6",
   showcaseUrl: "https://www.youtube.com/watch?v=N_aLIddx_Cs",
   showcaseEmbedUrl: "https://www.youtube.com/embed/N_aLIddx_Cs",
   filmLibraryUrl:
@@ -36,6 +37,7 @@ export const projects = [
     category: "School Platforms",
     url: "https://github.com/cburdick28-spec/BrewsterApp",
     featured: true,
+    recruitingFeatured: true,
   },
   {
     name: "BrewsterAI",
@@ -43,6 +45,7 @@ export const projects = [
     tech: ["Python", "AI"],
     category: "AI Systems",
     url: "https://github.com/cburdick28-spec/BrewsterAI",
+    recruitingFeatured: true,
   },
   {
     name: "chatbot",
@@ -64,6 +67,7 @@ export const projects = [
     tech: ["TypeScript", "Simulation"],
     category: "Games / Simulations",
     url: "https://github.com/cburdick28-spec/Soccersim",
+    recruitingFeatured: true,
   },
   {
     name: "futtysim",
@@ -71,6 +75,7 @@ export const projects = [
     tech: ["TypeScript", "Simulation"],
     category: "Games / Simulations",
     url: "https://github.com/cburdick28-spec/futtysim",
+    recruitingFeatured: true,
   },
   {
     name: "python-casino",
