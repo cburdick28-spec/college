@@ -73,7 +73,7 @@ const builderProjects = projects.filter((project) =>
 
 export default function Home() {
   return (
-    <div id="top" className="space-y-16 pb-10">
+    <div className="space-y-16 pb-10">
       <HeroSection />
 
       <section id="snapshot" className="space-y-6">
