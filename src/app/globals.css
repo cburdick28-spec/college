@@ -4,6 +4,10 @@
   color-scheme: dark;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   border-color: rgb(39 39 42);
 }

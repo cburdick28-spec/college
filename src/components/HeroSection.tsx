@@ -4,23 +4,27 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { athleteProfile } from "@/lib/site-data";
-import { StatsCard } from "@/components/StatsCard";
 import { Button } from "@/components/ui/button";
 
-const stats = [
-  ["Height", athleteProfile.height],
-  ["Weight", athleteProfile.weight],
-  ["Position", "GK (Forward experience)"],
-  ["Foot", athleteProfile.foot],
-  ["GPA", athleteProfile.gpa],
-] as const;
+const chips = [
+  athleteProfile.height,
+  athleteProfile.weight,
+  `${athleteProfile.foot} Foot`,
+  `GPA ${athleteProfile.gpa}`,
+  "Brewster Madrid",
+  "USA",
+];
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 p-6 sm:p-10">
-      <div className="absolute inset-0 opacity-40" aria-hidden>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,.28),transparent_45%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:32px_32px]" />
+    <section
+      id="hero"
+      className="relative isolate flex min-h-[calc(100vh-5rem)] items-center overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/60 px-6 py-16 shadow-2xl backdrop-blur sm:px-10"
+    >
+      <div className="absolute inset-0 -z-10" aria-hidden>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.35),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(234,179,8,0.18),transparent_50%)]" />
+        <div className="absolute inset-0 opacity-40 bg-[linear-gradient(120deg,rgba(255,255,255,0.08),transparent_40%)]" />
       </div>
       <motion.div
         className="relative"
@@ -28,29 +32,35 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <p className="text-sm uppercase tracking-[0.2em] text-blue-300">Student-Athlete | Builder | AI Developer</p>
-        <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">Connor Burdick</h1>
-        <p className="mt-3 text-lg text-zinc-300">Goalkeeper | Class of 2028 | Madrid, Spain</p>
+        <p className="text-xs uppercase tracking-[0.4em] text-blue-200">NCAA Division I Recruiting Profile</p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+          Connor Burdick
+        </h1>
+        <p className="mt-4 text-lg text-zinc-200">Goalkeeper | Class of 2028 | Madrid, Spain</p>
+        <p className="mt-4 max-w-2xl text-base text-zinc-300">
+          International student-athlete combining elite soccer development with strong academics and technical
+          building skills.
+        </p>
 
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/soccer">
-            <Button size="lg">View Highlights</Button>
+          <Link href="/#showcase">
+            <Button size="lg">Watch Footage</Button>
           </Link>
-          <Link href="/recruiting">
+          <Link href="/#contact">
             <Button size="lg" variant="outline">
               Recruiting Profile
             </Button>
           </Link>
-          <Link href="/contact">
-            <Button size="lg" variant="outline">
-              Contact
-            </Button>
-          </Link>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-5">
-          {stats.map(([label, value]) => (
-            <StatsCard key={label} label={label} value={value} />
+        <div className="mt-8 flex flex-wrap gap-2">
+          {chips.map((chip) => (
+            <span
+              key={chip}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-200 shadow-sm"
+            >
+              {chip}
+            </span>
           ))}
         </div>
       </motion.div>
