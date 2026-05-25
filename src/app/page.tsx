@@ -20,9 +20,9 @@ const snapshotItems = [
     title: "Academics",
     copy: (
       <>
-        GPA trend{" "}
-        <span aria-label={athleteProfile.gpaTrendLabel}>{athleteProfile.gpaTrend}</span> with strong STEM and
-        business performance.
+        GPA trend <span aria-hidden="true">{athleteProfile.gpaTrend}</span>
+        <span className="sr-only">{athleteProfile.gpaTrendLabel}</span> with strong STEM and business
+        performance.
       </>
     ),
   },
@@ -227,10 +227,11 @@ export default function Home() {
             <h3 className="text-xl font-semibold text-white">Academic trajectory</h3>
             <p className="text-sm text-zinc-300">
               GPA progression{" "}
-              <span className="font-semibold text-white" aria-label={athleteProfile.gpaTrendLabel}>
+              <span className="font-semibold text-white" aria-hidden="true">
                 {athleteProfile.gpaTrend}
-              </span>{" "}
-              with strong STEM performance and business + computer science strengths.
+              </span>
+              <span className="sr-only">{athleteProfile.gpaTrendLabel}</span> with strong STEM performance and
+              business + computer science strengths.
             </p>
             <AcademicsChartSection />
             <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
