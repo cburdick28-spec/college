@@ -152,7 +152,7 @@ export default function Home() {
           <article className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg backdrop-blur">
             <h3 className="text-lg font-semibold text-white">Recruiting focus</h3>
             <p className="mt-3 text-sm text-zinc-300">
-              Prioritizes game-real decision making, command of the box, and distribution choices under
+              Prioritizes real-game decision making, command of the box, and distribution choices under
               pressure with clear labeling for quick coach evaluation.
             </p>
           </article>
