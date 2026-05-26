@@ -27,7 +27,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(59,130,246,0.35),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_10%,rgba(14,165,233,0.25),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(16,185,129,0.22),transparent_60%)]" />
-        <div className="absolute inset-0 opacity-60 blur-3xl bg-[radial-gradient(ellipse_at_bottom,rgba(16,185,129,0.45),transparent_65%)]" />
+        <div className="absolute inset-0 opacity-60 blur-2xl bg-[radial-gradient(ellipse_at_bottom,rgba(16,185,129,0.45),transparent_65%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,18,0.9),rgba(3,7,18,0.45)_45%,rgba(2,6,23,0.92))]" />
         <div className="absolute inset-0 opacity-15 bg-[linear-gradient(0deg,rgba(148,163,184,0.6)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.6)_1px,transparent_1px)] bg-[size:90px_90px]" />
       </div>
