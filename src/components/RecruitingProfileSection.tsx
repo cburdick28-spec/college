@@ -104,7 +104,7 @@ export function RecruitingProfileSection() {
           viewport={{ once: true, amount: 0.4 }}
         >
           <motion.div variants={itemVariants}>
-            <p className="text-xs uppercase tracking-[0.4em] text-blue-200">NCAA Division I Recruiting Profile</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-blue-200">NCAA Division I Recruiting Profile</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               About Me / Recruiting Profile
             </h2>

@@ -11,7 +11,7 @@ export default function RecruitingPage() {
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-start">
         <article className="rounded-2xl border border-white/10 bg-white/5 p-6 text-sm text-zinc-200 shadow-[0_25px_70px_rgba(15,23,42,0.45)] backdrop-blur">
-          <h2 className="text-xl font-semibold text-white">Interested in recruiting Connor Burdick?</h2>
+          <h3 className="text-xl font-semibold text-white">Interested in recruiting Connor Burdick?</h3>
           <p className="mt-4">
             Email: <span className="text-zinc-100">{contactInfo.email}</span>
           </p>
