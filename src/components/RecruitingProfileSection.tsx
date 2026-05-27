@@ -52,7 +52,7 @@ const itemVariants = {
 export function RecruitingProfileSection() {
   return (
     <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-950/70 px-6 py-12 shadow-[0_35px_120px_rgba(3,7,18,0.7)] backdrop-blur-xl sm:px-10">
-      <motion.div className="absolute inset-0 -z-10" aria-hidden>
+      <motion.div className="absolute inset-0 -z-10" aria-hidden="true">
         <motion.div
           className="absolute inset-0 opacity-80"
           style={{
@@ -121,7 +121,7 @@ export function RecruitingProfileSection() {
                 >
                   <div className="flex items-center gap-3">
                     <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/10 text-blue-200 shadow-[0_0_25px_rgba(59,130,246,0.35)]">
-                      <Icon className="h-5 w-5" aria-hidden />
+                      <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
                     <h3 className="text-lg font-semibold text-white">{section.title}</h3>
                   </div>
