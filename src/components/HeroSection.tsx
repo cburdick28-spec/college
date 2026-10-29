@@ -11,6 +11,7 @@ const chips = [
   athleteProfile.weight,
   `${athleteProfile.foot} Foot`,
   `GPA ${athleteProfile.gpa}`,
+  athleteProfile.club,
   "Brewster Madrid",
   "USA",
 ];
@@ -37,14 +38,18 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <p className="text-xs uppercase tracking-[0.4em] text-blue-200">NCAA Division I Recruiting Profile</p>
+        <p className="text-xs uppercase tracking-[0.4em] text-blue-200">
+          {athleteProfile.targetDivisions} Recruiting Profile
+        </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-6xl">
           Connor Burdick
         </h1>
-        <p className="mt-4 text-lg text-zinc-200">Goalkeeper | Class of 2028 | Madrid, Spain</p>
+        <p className="mt-4 text-lg text-zinc-200">
+          Goalkeeper | Class of 2028 | {athleteProfile.club} ({athleteProfile.clubLevel}) | Madrid, Spain
+        </p>
         <p className="mt-4 max-w-2xl text-base text-zinc-300">
-          International student-athlete combining elite soccer development with strong academics and technical
-          building skills.
+          International goalkeeper and builder looking to study {athleteProfile.intendedMajors.join(", ")} at a
+          small private college in {athleteProfile.targetRegion}.
         </p>
 
         <div className="mt-6 flex flex-wrap gap-3">

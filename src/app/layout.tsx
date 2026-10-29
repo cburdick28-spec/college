@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://connor-burdick.vercel.app"),
   title: "Connor Burdick | Goalkeeper Soccer Recruit | Class of 2028",
   description:
-    "Connor Burdick is a goalkeeper recruit (Class of 2028) training in Madrid, Spain with a 2.6 → 3.6 GPA academic climb and AI/software builder profile.",
+    "Connor Burdick is a Class of 2028 goalkeeper at C.D.E. Malasaña F.C. in Madrid, Spain with a 3.6 GPA, targeting NCAA Division II and III programs at small private colleges in New England for computer science, cybersecurity, or business.",
   openGraph: {
     title: "Connor Burdick | Goalkeeper Soccer Recruit | Class of 2028",
     description:
-      "Goalkeeper-first NCAA recruiting profile with international development, academics, and technical builder portfolio.",
+      "Goalkeeper recruiting profile for NCAA Division II and III: film, academics, intended majors, and a technical builder portfolio.",
     type: "website",
     locale: "en_US",
     url: "https://connor-burdick.vercel.app",
@@ -47,6 +47,9 @@ const athleteSchema = {
     "Soccer Recruiting",
     "Artificial Intelligence",
     "Software Development",
+    "Computer Science",
+    "Cybersecurity",
+    "Entrepreneurship",
   ],
   sameAs: [athleteProfile.githubUrl, athleteProfile.instagramUrl],
 };

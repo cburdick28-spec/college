@@ -2,12 +2,12 @@ import Link from "next/link";
 
 const navItems = [
   ["Overview", "/#hero"],
+  ["Academics", "/#academics"],
   ["Snapshot", "/#snapshot"],
   ["Footage", "/#showcase"],
   ["Film Library", "/#film-library"],
   ["Scouting", "/#scouting"],
   ["International", "/#international"],
-  ["Academics", "/#academics"],
   ["Contact", "/#contact"],
 ] as const;
 

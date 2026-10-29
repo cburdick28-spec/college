@@ -30,6 +30,14 @@ const snapshotItems = [
     title: "Builder Profile",
     copy: "AI tools, apps, simulations, and websites with an entrepreneurial mindset.",
   },
+  {
+    title: "Club",
+    copy: `${athleteProfile.club}, ${athleteProfile.clubLevel} (${athleteProfile.clubLeague}).`,
+  },
+  {
+    title: "What I'm Looking For",
+    copy: `${athleteProfile.targetDivisions} at a ${athleteProfile.targetSchoolType.toLowerCase()} in ${athleteProfile.targetRegion}, studying ${athleteProfile.intendedMajors.join(", ")}.`,
+  },
 ];
 
 const scoutingReport = [
@@ -79,6 +87,61 @@ export default function Home() {
   return (
     <div className="space-y-16 pb-10">
       <HeroSection />
+
+      <section id="academics" className="space-y-6">
+        <div className="space-y-2">
+          <p className="text-xs uppercase tracking-[0.4em] text-blue-200">Academics + Intended Major</p>
+          <h2 className="text-3xl font-semibold text-white">Student first, with a clear direction</h2>
+        </div>
+        <div className="grid gap-6 lg:grid-cols-2">
+          <article className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg backdrop-blur">
+            <div className="flex items-end gap-4">
+              <p className="text-6xl font-semibold leading-none text-white">{athleteProfile.gpa}</p>
+              <p className="pb-1 text-sm text-zinc-300">
+                GPA, up from{" "}
+                <span aria-hidden="true">{athleteProfile.gpaTrend.split(" → ")[0]}</span>
+                <span className="sr-only">{athleteProfile.gpaTrendLabel.split(" to ")[0]}</span>
+              </p>
+            </div>
+            <p className="text-sm text-zinc-300">
+              Strong STEM and business performance with a steady upward trend.
+            </p>
+            <div className="space-y-2">
+              <p className="text-xs uppercase tracking-[0.3em] text-zinc-400">Intended majors</p>
+              <div className="flex flex-wrap gap-2">
+                {athleteProfile.intendedMajors.map((major) => (
+                  <span
+                    key={major}
+                    className="rounded-full border border-blue-200/30 bg-white/10 px-3 py-1 text-xs font-medium text-blue-100"
+                  >
+                    {major}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <AcademicsChartSection />
+            <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
+              <li>Discipline-driven upward academic arc</li>
+              <li>Analytical systems thinking and problem solving</li>
+              <li>Consistent improvement in structure and execution</li>
+            </ul>
+          </article>
+          <article className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg backdrop-blur">
+            <div>
+              <h3 className="text-xl font-semibold text-white">Builder portfolio</h3>
+              <p className="mt-2 text-sm text-zinc-300">
+                Real projects in AI, apps, and simulations that back up the computer science and
+                entrepreneurship interest.
+              </p>
+            </div>
+            <div className="grid gap-4">
+              {builderProjects.map((project) => (
+                <ProjectCard key={project.name} {...project} />
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
 
       <section id="snapshot" className="space-y-6">
         <div className="space-y-2">
@@ -214,45 +277,6 @@ export default function Home() {
               {point}
             </article>
           ))}
-        </div>
-      </section>
-
-      <section id="academics" className="space-y-6">
-        <div className="space-y-2">
-          <p className="text-xs uppercase tracking-[0.4em] text-blue-200">Academics + Builder Profile</p>
-          <h2 className="text-3xl font-semibold text-white">Built beyond soccer</h2>
-        </div>
-        <div className="grid gap-6 lg:grid-cols-2">
-          <article className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg backdrop-blur">
-            <h3 className="text-xl font-semibold text-white">Academic trajectory</h3>
-            <p className="text-sm text-zinc-300">
-              GPA progression{" "}
-              <span className="font-semibold text-white" aria-hidden="true">
-                {athleteProfile.gpaTrend}
-              </span>
-              <span className="sr-only">{athleteProfile.gpaTrendLabel}</span> with strong STEM performance and
-              business + computer science strengths.
-            </p>
-            <AcademicsChartSection />
-            <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
-              <li>Discipline-driven upward academic arc</li>
-              <li>Analytical systems thinking and problem solving</li>
-              <li>Consistent improvement in structure and execution</li>
-            </ul>
-          </article>
-          <article className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg backdrop-blur">
-            <div>
-              <h3 className="text-xl font-semibold text-white">Builder portfolio</h3>
-              <p className="mt-2 text-sm text-zinc-300">
-                AI tools, apps, simulations, and web systems demonstrating entrepreneurial mindset.
-              </p>
-            </div>
-            <div className="grid gap-4">
-              {builderProjects.map((project) => (
-                <ProjectCard key={project.name} {...project} />
-              ))}
-            </div>
-          </article>
         </div>
       </section>
 

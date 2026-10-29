@@ -4,6 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { GraduationCap, Handshake, Sparkles, Target, User } from "lucide-react";
 
+import { athleteProfile } from "@/lib/site-data";
+
 const profileSections = [
   {
     title: "About Me",
@@ -23,7 +25,7 @@ const profileSections = [
   {
     title: "What I’m Looking For in a College",
     icon: GraduationCap,
-    body: "Looking for a college with a competitive and supportive culture where strong relationships between players and coaches are valued, along with opportunities to grow academically and athletically.",
+    body: "Looking for a small private college in New England with a competitive and supportive Division II or III program, strong relationships between players and coaches, and real strength in computer science, cybersecurity, or business and entrepreneurship.",
   },
   {
     title: "How I Can Help the Program",
@@ -104,7 +106,9 @@ export function RecruitingProfileSection() {
           viewport={{ once: true, amount: 0.4 }}
         >
           <motion.div variants={itemVariants}>
-            <p className="text-xs uppercase tracking-[0.25em] text-blue-200">NCAA Division I Recruiting Profile</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-blue-200">
+              {athleteProfile.targetDivisions} Recruiting Profile
+            </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               About Me / Recruiting Profile
             </h2>
